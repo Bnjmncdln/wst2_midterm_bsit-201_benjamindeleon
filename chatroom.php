@@ -15,7 +15,7 @@
         }
     ?>
     <h1>Welcome to Chatroom</h1>
-
+    <a href="logout.php">Logout</a>
     <div id="chatroom">
         <div class="messages"></div>
         <div class="input">

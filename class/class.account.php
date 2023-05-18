@@ -3,13 +3,13 @@
 class Accounts{
     public function login(){
         session_start();
-        $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $pdo = new PDO('mysql:host=localhost;dbname=chatroom','root','');
+        $pdo = new PDO('mysql:host=localhost;dbname=bsit201_deleonbenj_chatroom','root','');
 
-        $account = $pdo->prepare('SELECT * FROM accounts WHERE username=:username and password=:password');
-        $account->bindValue('username',$username);
+        $account = $pdo->prepare('SELECT * FROM accounts WHERE email=:email and password=:password');
+        $account->bindValue('email',$email);
         $account->bindValue('password',$password);
         $account->execute();
 

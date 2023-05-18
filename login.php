@@ -17,17 +17,20 @@
     <form>
         <div id="signin-status"></div>
         <div>
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
         </div>
         <div>
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
         </div>
         <div>
-            <button type="button">Sign In</button>
+            <button type="button" id="signin">Sign In</button>
         </div>
     </form>
+
+    <a href="registration.php">Register Here <--</a>
+
     
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/login.js"></script>

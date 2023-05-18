@@ -5,7 +5,7 @@ class Messages{
         $message = $_POST['message'];
         $id = $_SESSION['auth'][0]['id'];
 
-        $pdo = new PDO('mysql:host=localhost;dbname=chatroom','root','');
+        $pdo = new PDO('mysql:host=localhost;dbname=bsit201_deleonbenj_chatroom','root','');
 
         $messages = $pdo->prepare('INSERT INTO messages(account_id,message) VALUES (:account_id,:message)');
         $messages->bindValue('account_id',$id);
@@ -18,7 +18,7 @@ class Messages{
 
         $id = $_SESSION['auth'][0]['id'];
 
-        $pdo = new PDO('mysql:host=localhost;dbname=chatroom','root','');
+        $pdo = new PDO('mysql:host=localhost;dbname=bsit201_deleonbenj_chatroom','root','');
 
         $messages = $pdo->prepare('SELECT m.id,m.message,m.timestamp,a.name,m.account_id FROM `messages` as m INNER JOIN accounts as a ON a.id = m.account_id;');
         $messages->execute();
